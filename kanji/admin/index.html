@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>問題登録｜難読漢字苑</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="overlay"></div>
+
+<!-- ログイン -->
+<div class="container" id="loginBox">
+  <h1>難読漢字苑 管理</h1>
+  <input type="password" id="password" placeholder="パスワード">
+  <button id="loginBtn">ログイン</button>
+</div>
+
+<!-- 管理画面 -->
+<div class="container hidden" id="adminBox">
+  <h2>問題登録</h2>
+
+  <select id="grade">
+    <option value="5">五級</option>
+    <option value="4">四級</option>
+    <option value="3">三級</option>
+    <option value="2">二級</option>
+    <option value="1">一級</option>
+    <option value="0">零級</option>
+  </select>
+
+  <input id="kanji" placeholder="漢字">
+  <input id="reading" placeholder="よみ（ひらがな、カンマで複数登録）例: こーひー,こうひい">
+  <input id="condition" placeholder="解答条件（オプション）例: 外来語で">
+  <input id="source" placeholder="出典  例: 広辞苑第七版">
+  <button id="addBtn">登録</button>
+
+  <h3>登録済み問題</h3>
+  <ul id="list"></ul>
+</div>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>

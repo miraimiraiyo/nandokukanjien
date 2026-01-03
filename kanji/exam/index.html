@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>難読漢字苑</title>
+<link rel="manifest" href="../manifest.json">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="overlay"></div>
+
+<div class="container" id="nameBox">
+  <h1>難読漢字苑</h1>
+  <p class="sub">難読漢字のクイズサイト</p>
+  <input id="username" placeholder="名前を入力">
+  <button id="saveBtn">開始</button>
+</div>
+
+<div class="container hidden" id="select">
+  <h2>級を選択</h2>
+  <div class="grid" id="buttons"></div>
+</div>
+
+<div class="container hidden" id="quiz">
+  <div id="kanjiBox"></div>
+  <input id="answer">
+  <button id="submitBtn">回答</button>
+</div>
+
+<div class="container hidden" id="result"></div>
+
+<script type="module" src="script.js"></script>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("../service-worker.js");
+}
+</script>
+</body>
+</html>

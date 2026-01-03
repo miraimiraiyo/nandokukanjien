@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: url("kanji/assets/yakasuri.jpg") center / cover no-repeat fixed;
+}
+
+/* 暗幕オーバーレイ（文字を読みやすく） */
+.overlay {
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 白いボックス（コンテナ）の調整 */
+.container {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  
+  /* 横幅の調整 */
+  width: 90%;            /* スマホなどの時は画面の90% */
+  max-width: 800px;      /* PCで見るときの最大幅を800pxに広げる（元の設定より広め） */
+  
+  /* 余白の調整 */
+  margin: 40px auto;     /* 上下の隙間と中央配置 */
+  padding: 50px 60px;    /* 上下50px、左右60pxの広めの余白 */
+  
+  box-sizing: border-box; /* パディングを含めたサイズ計算にする */
+}
+
+/* テキスト全体の行間と配置 */
+p {
+  line-height: 1.8;      /* 行間を広げて読みやすくする */
+  margin-bottom: 1.5em;  /* 段落ごとの隙間 */
+  text-align: left;      /* 文章は左寄せ */
+}
+
+/* タイトル */
+h1 {
+  font-size: 56px;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 20px;
+  color: #444;
+  margin-bottom: 40px;
+}
+
+h1, h2 {
+  text-align: center;    /* タイトル類は中央寄せ */
+  margin-bottom: 20px;
+}
+
+h3 {
+  border-left: 5px solid #f38118; /* 見出しにアクセントの左線を引く例（任意） */
+  padding-left: 10px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/* ルール */
+.rules {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.rules h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.rules p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* スタートボタン */
+.start-button {
+  display: block;          /* インライン要素からブロック要素に変更 */
+  width: fit-content;      /* 横幅をボタンの中身（文字）に合わせる */
+  margin: 40px auto;       /* 上下に40px、左右は自動（中央寄せ） */
+  padding: 16px 40px;
+  font-size: 20px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.start-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+}
+
+/* フッター（リンク類）の調整 */
+.footer-links {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #eee; /* 境界線を入れてスッキリさせる */
+  text-align: center;
+}
+
+.footer-links a {
+  color: #666; /* 目立ちすぎない色 */
+  text-decoration: none;
+  margin: 0 10px; /* リンク同士の間隔 */
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #000; /* ホバー時に少し濃くする */
+  text-decoration: underline;
+}
+
+/* 規約・プライバシーポリシーページのコンテナ調整 */
+.legal-container {
+  max-width: 800px; /* 少し幅を広げる */
+  text-align: left; /* 文章は左寄せが読みやすい */
+  max-height: 80vh; /* 画面の高さの8割を上限にする */
+  overflow-y: auto; /* 長い場合にスクロール可能にする */
+  padding: 40px;
+}
+
+.legal-content h3 {
+  border-bottom: 1px solid #ccc;
+  margin-top: 25px;
+  padding-bottom: 5px;
+  font-size: 1.2rem;
+}
+
+.legal-content p, .legal-content li {
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.legal-content ul {
+  padding-left: 20px;
+}
+
+/* 戻るボタンの装飾 */
+.footer-nav {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #666;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.back-button:hover {
+  background-color: #333;
+}
+
+.copyright {
+  margin-top: 15px;
+  color: #888;
+  font-size: 0.7rem;
+}
+
+/* 運営・連絡先セクションのスタイル */
+.operator-info {
+  margin-top: 40px;
+}
+
+.contact-list {
+  margin-top: 10px;
+  line-height: 1.8;
+}
+
+.contact-row {
+  display: flex; /* 横並びにする */
+  flex-wrap: wrap; /* 画面が狭いときは折り返す */
+}
+
+.contact-row .name {
+  width: 140px; /* ここで名前部分の幅を固定（お好みで調整してください） */
+  display: inline-block;
+  flex-shrink: 0; /* 幅が狭まらないように固定 */
+}
+
+.contact-row a {
+  word-break: break-all; /* 長いURLが画面からはみ出さないようにする */
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.contact-row a:hover {
+  text-decoration: underline;
+}
+
+.enacted-date {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
